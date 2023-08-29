@@ -68,6 +68,10 @@
 #include <arm_acle.h>
 #endif
 
+#if defined(__AVX__)
+#    include <immintrin.h>
+#endif
+
 #if defined(__GNUC__)
 #define SNAPPY_PREFETCH(ptr) __builtin_prefetch(ptr, 0, 3)
 #else
